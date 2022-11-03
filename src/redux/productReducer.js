@@ -8,7 +8,7 @@ export const productReducer = (state = initialState, { type, payload }) => {
         case actionType.SET_PRODUCTS:
             return { ...state, products: payload };
             case actionType.FETCH_PRODUCTS:
-      return { ...state, products: payload };
+             return { ...state, products: payload };
         default:
             return state;
     }
@@ -20,5 +20,7 @@ export const selectedProductReducer = (state = {}, { type, payload }) => {
             return { ...state, ...payload };
         case actionType.REMOVE_SELECTED_PRODUCT:
             return {};
+        default:
+            return state;
     }
 }
